@@ -166,4 +166,46 @@ footer #copy {
 }
 footer #email {
   color: #191D1A;
+}
+
+.thanks {
+  margin: 230px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.thanks h1 {
+  font-size: 96px;
+}
+.thanks p {
+  max-width: 700px;
+  min-width: auto;
+  padding: 0 10px;
+  font-size: 24px;
+}
+
+.step {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+.step .stepInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.step .stepInfo p {
+  width: 50%;
+}
+.step img {
+  width: 600px;
+}
+.step #step1 {
+  width: 936px !important;
 }/*# sourceMappingURL=style.css.map */
