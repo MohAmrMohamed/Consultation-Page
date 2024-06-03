@@ -157,6 +157,7 @@ nav #navBtn:hover {
 }
 .FAQ .accordion {
   margin: 25px 50px;
+  border: 1px solid black;
 }
 .FAQ .accordion .accordion-item {
   border-bottom: 1px solid #ccc;
@@ -286,4 +287,79 @@ footer #email {
 }
 .step #step1 {
   width: 936px !important;
+}
+
+@media (max-width: 1360px) {
+  .hero img {
+    width: 400px;
+  }
+  .hero h1 {
+    font-size: 74px;
+    margin-top: 120px;
+  }
+  .thanks h1 {
+    font-size: 64px;
+  }
+  .footer p {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .step {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .step .stepInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+  }
+  .step .stepInfo p {
+    width: 70%;
+  }
+  .step img {
+    width: 200px;
+    order: 2;
+  }
+  .step #step1 {
+    width: 500px !important;
+  }
+}
+@media (max-width: 860px) {
+  .hero {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero img {
+    width: 300px;
+  }
+  .hero .heroLeft {
+    padding-left: 15px;
+  }
+  .hero .heroLeft h1 {
+    font-size: 44px;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .accordion-title {
+    font-size: 16px;
+  }
+}
+@media (max-width: 525px) {
+  .process .quoteBtn {
+    font-size: 24px;
+  }
+  .process .processBtn {
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=style.css.map */
