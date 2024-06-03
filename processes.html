@@ -14,8 +14,8 @@
   </head>
   <body>
     <nav>
-        <button id="navBtn" class="montserrat-body">Contact Us</button>
-        <img src="Group 19logo.svg">
+        <a href="mailto:disha@uplers.com?bcc=kevin@uplers.com&subject=Can%20you%20help"><button id="navBtn" class="montserrat-body">Contact Us</button></a>
+        <a href="index.html"><img src="Group 19logo.svg"></a>
     </nav>
     <div class="thanks">
         <h1 class="lora-heading">Our Process</h1>
@@ -27,7 +27,7 @@
                 <h3  class="lora-heading">1 - Initial Consultation</h3>
                 <p class="montserrat-body">Every journey begins with a conversation. During our initial  consultation, we'll take the time to understand your goals, challenges,  and aspirations. Whether you're looking to launch a new product, expand  into new markets, or improve organizational efficiency, we're here to  listen and learn.</p>
             </div>
-            <img src="step1.svg"> 
+            <img src="step1.svg" id="step1"> 
         </div>
         <div class="step">
             <img src="step2.svg"> 
@@ -60,11 +60,22 @@
             <img src="step5.svg"> 
         </div>
     </main>
+    <div class="process">
+        <a class="quoteBtn" href="#" onclick="sendMailAndRedirect()">Let's work together</a>
+      </div>
     <footer>
       <a href='mailto:“disha@uplers.com?bcc=”kevin@uplers.com?subject=Can%20you%20help%20”' target="_blank"><p id="email">contact@eliteconsulting.com</p></a>
       <p>456 Innovation Drive, Suite 101, Metropolis, NY 12345, +1 (555) 123-4567</p>
       <p>Mon-Fri 9:00 AM - 6:00 PM</p>
       <p id="copy">Copyright 2024</p>
     </footer>
+    <script>
+        function sendMailAndRedirect() {
+            window.location.href = "mailto:disha@uplers.com?bcc=kevin@uplers.com&subject=Can%20you%20help";
+            setTimeout(function() {
+                window.location.href = 'thanks.html';
+            }, 1000); // Redirect after 1 second
+        }
+    </script>
   </body>                                                           
 </html>

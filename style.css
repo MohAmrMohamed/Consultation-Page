@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .lora-heading {
@@ -42,6 +43,7 @@ nav {
   width: 100%;
   background-color: #05A8AA;
   top: 0;
+  z-index: 999;
 }
 nav #navBtn {
   background-color: #89BC89;
@@ -81,9 +83,15 @@ nav #navBtn {
   background-color: #F6EAEA;
   border-radius: 24px;
   padding: 16px 12px 16px 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 .whyUs .cards .card strong {
   color: #89BC89;
+}
+.whyUs .cards .card:hover {
+  transform: scale(1.2);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
 .testimonials {
@@ -101,6 +109,8 @@ nav #navBtn {
   background-color: #FADDCB;
   border-radius: 16px;
   min-width: 550px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
 }
 .testimonials .sliding .testimonial .footnote {
   display: flex;
@@ -108,17 +118,47 @@ nav #navBtn {
   justify-content: space-between;
   margin: 0 2%;
 }
+.testimonials .sliding .testimonial:hover {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
 .testimonials .sliding .project {
-  width: 588px;
+  width: 400px;
   height: -moz-fit-content;
   height: fit-content;
   flex: 0 0 auto; /* Prevents shrinking */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.testimonials .sliding .project img {
+  max-width: 100%; /* Ensure image does not exceed card width */
+  max-height: 100%; /* Ensure image does not exceed card height */
+  height: auto; /* Maintain aspect ratio */
+  width: auto; /* Ensure image fits within max-width and max-height */
 }
 .testimonials .sliding .project .rectangle {
-  position: relative;
-  top: -25%;
   background-color: #D9D9D9;
   padding: 20px 30px;
+}
+.testimonials .sliding .project:hover {
+  transform: scale(1.01);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+.accordion .accordion-title {
+  background-color: #f4f4f4;
+  padding: 10px;
+  cursor: pointer;
+}
+.accordion .accordion-content {
+  display: none;
+  padding: 10px;
+}
+.accordion .accordion-icon {
+  float: right;
+  transition: transform 0.3s ease; /* Added transition */
 }
 
 .process {
@@ -131,22 +171,39 @@ nav #navBtn {
 .process .processBtn {
   display: inline-block;
   background-color: #89BC89;
-  border: 1px solid black;
+  border: none;
   border-radius: 8px;
   font-size: 36px;
-  color: black;
+  color: white;
   padding: 8px 64px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.process .processBtn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  color: #89BC89;
+  background-color: white;
 }
 .process .quoteBtn {
   display: inline-block;
   background-color: #05A8AA;
-  border: 1px solid black;
+  border: none;
   border-radius: 16px;
   font-size: 36px;
   color: white;
   padding: 8px 64px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.process .quoteBtn:hover {
+  text-decoration: none;
+  transform: scale(1.2);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  color: #05A8AA;
+  background-color: white;
 }
 
 footer {

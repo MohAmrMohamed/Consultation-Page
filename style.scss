@@ -11,6 +11,7 @@ $rect: #D9D9D9;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 .lora-heading {
     font-family: "Lora", serif;
@@ -49,7 +50,7 @@ nav {
     width: 100%;
     background-color: $primary1;
     top: 0;
-    
+    z-index: 999;
     #navBtn {
         background-color: $primary2;
         border: 1px solid black;
@@ -87,9 +88,15 @@ nav {
             background-color: $primary3;
             border-radius: 24px;
             padding: 16px 12px 16px 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             strong {
                 color: $primary2;
             }
+        }
+        .card:hover{
+            transform: scale(1.2);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); 
         }
     }
 }
@@ -107,6 +114,8 @@ nav {
             background-color: $primary3100;
             border-radius: 16px;
             min-width: 550px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 00);
             .footnote {
                 display: flex;
                 align-items: flex-start;
@@ -114,19 +123,61 @@ nav {
                 margin: 0 2%;
             }
         }
+        .testimonial:hover{
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); 
+        }
         .project {
-            width: 588px;
+            width: 400px;
             height: fit-content;
             flex: 0 0 auto; /* Prevents shrinking */
-            .rectangle {
-                position: relative;
-                top: -25%;
-                background-color: $rect;
-                padding: 20px 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            
+            img {
+              max-width: 100%; /* Ensure image does not exceed card width */
+              max-height: 100%; /* Ensure image does not exceed card height */
+              height: auto; /* Maintain aspect ratio */
+              width: auto; /* Ensure image fits within max-width and max-height */
             }
+          
+            .rectangle {
+              background-color: $rect;
+              padding: 20px 30px;
+              
+            }
+          }
+          
+          
+        .project:hover{
+            transform: scale(1.01);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); 
         }
     }
 }
+
+.accordion {
+    .accordion-item {
+        border-bottom: 1px solid #ccc;
+      }
+      
+      .accordion-title {
+        background-color: #f4f4f4;
+        padding: 10px;
+        cursor: pointer;
+      }
+      
+      .accordion-content {
+        display: none;
+        padding: 10px;
+      }
+      
+      .accordion-icon {
+        float: right;
+        transition: transform 0.3s ease; /* Added transition */
+      }
+}
+
+  
 
 .process {
     width: 100%;
@@ -138,23 +189,39 @@ nav {
         display: inline-block;
         
         background-color: $primary2;
-        border: 1px solid black;
+        border: none;
         border-radius: 8px;
         font-size: 36px;
-        color: black;
+        color: white;
         padding: 8px 64px;
         text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .processBtn:hover{
+        transform: scale(1.2);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        color: $primary2;
+        background-color: white;
     }
     .quoteBtn {
         display: inline-block;
-        
         background-color: $primary1;
-        border: 1px solid black;
+        border: none;
         border-radius: 16px;
         font-size: 36px;
         color: white;
         padding: 8px 64px;
         text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .quoteBtn:hover {
+        text-decoration: none;
+        transform: scale(1.2);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); 
+        color: $primary1;
+        background-color: white;
     }
 }
 
