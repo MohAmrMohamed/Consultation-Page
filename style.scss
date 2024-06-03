@@ -46,18 +46,26 @@ nav {
     display: flex !important;
     position: fixed;
     justify-content: space-between;
-    padding: 15px 20px 0 20px;
+    padding: 15px 20px 5px 20px;
     width: 100%;
     background-color: $primary1;
     top: 0;
     z-index: 999;
     #navBtn {
         background-color: $primary2;
-        border: 1px solid black;
+        border: none;
         border-radius: 8px;
         color: #FFFFFF;
         padding: 0 8px 0 8px;
         height: 40px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    #navBtn:hover {
+        color: $primary2;
+        background-color: #FFFFFF;
+        transform: scale(1.2);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); 
     }
 }
 
@@ -155,30 +163,43 @@ nav {
     }
 }
 
-.accordion {
-    .accordion-item {
-        border-bottom: 1px solid #ccc;
-      }
-      
-      .accordion-title {
-        background-color: #f4f4f4;
-        padding: 10px;
-        cursor: pointer;
-      }
-      
-      .accordion-content {
-        display: none;
-        padding: 10px;
-      }
-      
-      .accordion-icon {
-        float: right;
-        transition: transform 0.3s ease; /* Added transition */
-      }
+.FAQ {
+    
+    h1 {
+        text-align: center;
+    }
+    .accordion {
+        margin: 25px 50px;
+        .accordion-item {
+            border-bottom: 1px solid #ccc;
+            transition: all .3s ease-in-out;
+          }
+          
+          .accordion-title {
+            background-color: $primary3100;
+            padding: 10px;
+            cursor: pointer;
+            color: black;
+            font-size: 24px;
+            transition: all .3s ease-in-out;
+          }
+          
+          .accordion-content {
+            background-color: $primary3100;
+            display: none;
+            padding: 10px;
+            transition: all .3s ease-in-out;
+          }
+          
+          .accordion-icon {
+            float: right;
+            transition: transform 0.3s ease; /* Added transition */
+            transition: all .3s ease-in-out;
+          }
+    }
+    
 }
-
   
-
 .process {
     width: 100%;
     display: flex;
@@ -288,3 +309,4 @@ footer {
         width: 936px!important;
     }
 }
+

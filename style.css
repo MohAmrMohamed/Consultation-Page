@@ -39,7 +39,7 @@ nav {
   display: flex !important;
   position: fixed;
   justify-content: space-between;
-  padding: 15px 20px 0 20px;
+  padding: 15px 20px 5px 20px;
   width: 100%;
   background-color: #05A8AA;
   top: 0;
@@ -47,11 +47,19 @@ nav {
 }
 nav #navBtn {
   background-color: #89BC89;
-  border: 1px solid black;
+  border: none;
   border-radius: 8px;
   color: #FFFFFF;
   padding: 0 8px 0 8px;
   height: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+nav #navBtn:hover {
+  color: #89BC89;
+  background-color: #FFFFFF;
+  transform: scale(1.2);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
 .hero {
@@ -144,21 +152,34 @@ nav #navBtn {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
-.accordion .accordion-item {
-  border-bottom: 1px solid #ccc;
+.FAQ h1 {
+  text-align: center;
 }
-.accordion .accordion-title {
-  background-color: #f4f4f4;
+.FAQ .accordion {
+  margin: 25px 50px;
+}
+.FAQ .accordion .accordion-item {
+  border-bottom: 1px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+.FAQ .accordion .accordion-title {
+  background-color: #FADDCB;
   padding: 10px;
   cursor: pointer;
+  color: black;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
 }
-.accordion .accordion-content {
+.FAQ .accordion .accordion-content {
+  background-color: #FADDCB;
   display: none;
   padding: 10px;
+  transition: all 0.3s ease-in-out;
 }
-.accordion .accordion-icon {
+.FAQ .accordion .accordion-icon {
   float: right;
   transition: transform 0.3s ease; /* Added transition */
+  transition: all 0.3s ease-in-out;
 }
 
 .process {
