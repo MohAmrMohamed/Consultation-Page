@@ -112,6 +112,24 @@ nav #navBtn:hover {
   overflow-x: auto; /* Allows horizontal scrolling */
   -webkit-overflow-scrolling: touch;
 }
+.sliding {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* smoother on iOS */
+  gap: 1rem; /* space between cards */
+  padding: 1rem;
+}
+
+.testimonial {
+  flex: 0 0 30%; /* each card takes 80% of viewport width (adjust as needed) */
+  scroll-snap-align: start; /* snap to start of each card */
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 .testimonials .sliding .testimonial {
   padding: 15px;
   background-color: #FADDCB;
@@ -122,6 +140,7 @@ nav #navBtn:hover {
 }
 .testimonials .sliding .testimonial .footnote {
   display: flex;
+    -webkit-overflow-scrolling: touch;
   align-items: flex-start;
   justify-content: space-between;
   margin: 0 2%;
@@ -136,6 +155,7 @@ nav #navBtn:hover {
   flex: 0 0 auto; /* Prevents shrinking */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  scroll-snap-align: start; /* snap to start of each card */
 }
 .testimonials .sliding .project img {
   max-width: 100%; /* Ensure image does not exceed card width */
